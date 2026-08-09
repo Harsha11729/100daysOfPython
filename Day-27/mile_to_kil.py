@@ -1,0 +1,21 @@
+from tkinter import *
+window=Tk()
+window.title("Mile to Km Converter")                        ")
+window.minsize(width=200,height=200)
+input=Entry()
+input.grid(column=5,row=5)
+label_1=Label(text="Miles",font=("Arial",10))
+label_1.grid(column=6,row=5)
+label_2=Label(text="is Equal to",font=("Arial",10))
+label_2.grid(column=3,row=7)
+label_3=Label(text="Km")
+label_3.grid(column=6,row=7)
+label_4=Label(text=" ")
+label_4.grid(column=5,row=7)
+def click_butt():
+    num=float(input.get())
+    num*=1.6
+    label_4.config(text=str(int(num)))
+button=Button(text="Calculate",command=click_butt)
+button.grid(column=5,row=8)
+window.mainloop()
